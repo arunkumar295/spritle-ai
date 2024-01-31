@@ -1,0 +1,177 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+body {
+  font-family: "Inter", sans-serif !important;
+}
+.fs-18 {
+  font-size: 18px;
+}
+.bg-light {
+  background-color: #d9d9d9;
+}
+.text-left {
+  text-align: left;
+}
+.fs-16 {
+  font-size: 16px;
+}
+.fs-30 {
+  font-size: 30px;
+}
+.fw-600 {
+  font-weight: 600;
+}
+.fw-100 {
+  font-weight: 100;
+}
+.fs-15 {
+  font-size: 15px;
+}
+.ptb-80 {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+.ptb-60 {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+.txt-gray {
+  color: #848199;
+}
+.bg-gray {
+  background-color: #5243c2;
+}
+.bg-blue,
+.bg-blue:hover {
+  background-color: #00356b;
+  color: white;
+}
+.bg-white {
+  background-color: white;
+  color: #00356b;
+}
+.br-14 {
+  border-radius: 14px;
+}
+.box-shadow {
+  box-shadow: 0px 10px 20px gray;
+}
+.txt-blk {
+  color: #1e1e1e;
+}
+.txt-blue {
+  color: #00356b;
+}
+.fs-48 {
+  font-size: 45px;
+}
+.fs-20 {
+  font-size: 20px;
+  font-weight: 300;
+}
+.fs-40 {
+  font-size: 40px;
+}
+.fs-22 {
+  font-size: 22px;
+}
+.fw-300 {
+  font-weight: 300;
+}
+.lh-2 {
+  line-height: 2;
+}
+.bg-contain {
+  background-size: cover !important;
+}
+.h-390 {
+  height: 390px;
+}
+.btn-dark-rounded {
+  border-radius: 25px;
+  width: 90%;
+}
+.w-90 {
+  width: 90%;
+}
+.w-25 {
+  width: 25%;
+}
+.text-right {
+  text-align: right;
+}
+.w-lg-75 {
+  width: 75% !important;
+}
+.w-lg-50 {
+  width: 50% !important;
+}
+.owl-prev span,
+.owl-next span {
+  font-size: 30px !important;
+}
+.bg-purple {
+  background-color: #c3bbda;
+  color: white;
+}
+.gradient-card {
+  background: linear-gradient(to bottom left, #ff8c00, #ffffff 50%, #4caf50);
+}
+.semicircle {
+  width: 294px; /* Adjust the width as needed */
+  height: 147px; /* Adjust the height as needed */
+  border-radius: 147px 147px 0 0; /* Create a semicircle by adjusting border-radius values */
+  overflow: hidden; /* Hide the bottom half of the circle */
+  text-align: center;
+}
+.num {
+  position: relative;
+  bottom: 30px;
+}
+.bg-green {
+  background-color: #bbdac6;
+}
+.fs-42 {
+  font-size: 42px;
+}
+.h-40 {
+  height: 40px;
+}
+.subs-button {
+  position: relative;
+  left: -85px;
+}
+@media only screen and (max-width: 767px) {
+  .fs-48 {
+    font-size: 30px;
+  }
+  .fs-42 {
+    font-size: 30px;
+  }
+  .ptb-60 {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+}
+
+@keyframes fallAnimation {
+  0% {
+    transform: translateY(-100%);
+    filter: grayscale(100%); /* Apply grayscale to simulate disabled effect */
+  }
+  70% {
+    transform: translateY(100%);
+  }
+  85% {
+    transform: translateY(-10%);
+  }
+  100% {
+    transform: translateY(0);
+    filter: grayscale(0); /* Remove grayscale for normal appearance */
+  }
+}
+
+#falling-svg {
+  width: 100px; /* Adjust the width as needed */
+  height: 100px; /* Adjust the height as needed */
+  animation: fallAnimation 4s ease-in-out; /* Adjust animation duration and timing function */
+}
