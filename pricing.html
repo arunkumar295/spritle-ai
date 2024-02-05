@@ -13,6 +13,15 @@
       name="twitter:title"
       content="Airport Management System | Airport Management Ticketing Software"
     />
+    <link
+    href="https://assets.calendly.com/assets/external/widget.css"
+    rel="stylesheet"
+  />
+  <script
+    src="https://assets.calendly.com/assets/external/widget.js"
+    type="text/javascript"
+    async
+  ></script>
     <meta
       name="twitter:description"
       content="Digitize your airport fault and incident management and empower your internal teams to leverage real-time data with our comprehensive solution today!"
@@ -90,7 +99,7 @@
   </head>
   <body>
     <header class="main-header w-100 z-10">
-      <nav class="navbar navbar-expand-xl navbar-light sticky-header">
+      <nav class="navbar navbar-expand-xl navbar-light sticky-header fixed-top bg-white">
         <div
           class="container d-flex align-items-center justify-content-lg-between position-relative py-3 d-lg-flex d-none"
         >
@@ -132,7 +141,7 @@
             </ul>
           </div>
           <div>
-            <a href="#" class="btn bg-blue">Start for Free</a>
+            <a href="#" class="btn btn-outline-primary bg-blue ms-4 fs-18 justify-content-center  d-flex align-items-center" style="width: 190px;height: 41px;" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/meenaarun295/30min'}); return false;">Start for Free</a>
           </div>
         </div>
         <div
@@ -214,8 +223,7 @@
                         </ul>
                       </div>
                       <div>
-                        <a href="#" class="btn bg-blue">Start for Free</a>
-                      </div>
+                        <a href="#" class="btn btn-outline-primary bg-blue ms-4 fs-18 justify-content-center  d-flex align-items-center" style="width: 190px;height: 41px;" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/meenaarun295/30min'}); return false;">Start for Free</a>                      </div>
               </div>
             </div>
           </div>
@@ -223,7 +231,7 @@
       </nav>
     </header>
 
-    <div class="container mt-4">
+    <div class="container ptb-120">
       <div class="row justify-content-center">
         <div
           class="col-lg-12 text-center ptb-80 bg-contain"
@@ -400,74 +408,74 @@
         </div>
       </div>
     </div>
-    <div class="container ptb-60">
+    <div class="container-fluid bg-light ptb-60">
       <div class="row align-items-center justify-content-center">
         <h3 class="text-center txt-blue fs-30 fw-600">CALCULATE YOUR ROI</h3>
         <h4 class="text-center txt-blk mb-5 fs-30 fw-300">
           How Much Are Your Losing Without SpritleAI?
         </h4>
         <div
-          class="col-lg-9 d-lg-flex align-items-center justify-content-center"
+          class="col-lg-9 bg-white d-lg-flex  justify-content-center"
           style="
             box-shadow: 0px 16px 48px 0px #D9D9D9;
             border-radius: 10px;
           "
         >
           <div class="col-lg-6 p-3 mb-4 mb-lg-0">
-            <form>
-              <h5 class="mb-4">Your Current Process</h5>
+            <form class="my-3">
+              <h5 class="mb-4 fs-18 fw-600">Your Current Process</h5>
               <div class="mb-4">
                 <label class="mb-3"
                   >Enter the number of store visitors per month:</label
                 >
-                <input type="text" class="w-100" required id="visitors-pm" />
+                <input type="text" class="w-100 input" oninput="change(visitors-pm)" required id="visitors-pm" />
               </div>
               <div class="mb-4">
                 <label class="mb-3"
                   >Enter the number of orders you generate per month:</label
                 >
-                <input type="text" class="w-100" required id="order-pm" />
+                <input type="text" class="w-100 input" oninput="change(order-pm)" required id="order-pm" />
               </div>
               <div class="mb-4">
-                <label class="mb-3"
+                <label class="mb-3 "
                   >What is your store's Average Order Value (AOV)?</label
                 >
-                <input type="text" class="w-100" required id="aov" />
+                <input type="text" oninput="change(aov)" class="w-100 input" required id="aov" />
               </div>
               <div class="mt-5">
-                <button class="btn bg-blue w-100" id="myButton">calculate</button>
+                <button class="btn bg-blue w-100 fs-18 fw-600  mt-10" id="myButton">calculate</button>
               </div>
             </form>
           </div>
           <div class="col-lg-6">
           <div
-            class=" mx-3 px-2 pb-5 pt-3 bg-blue h-390"
+            class=" ms-3 my-2 px-2 pb-5 pt-3 bg-blue h-390"
             style="
               box-shadow: 0px 16px 48px 0px #D9D9D9;
               border-radius: 10px;
             "
           >
-            <h5 class="my-3 ps-3">Your Current Process</h5>
+            <h5 class="my-3 ps-3 fs-18 fw-600">ROI Calculator Result</h5>
             <ul class="list-group list-group-flush bg-blue">
-              <li class="list-group-item bg-blue lh-2">
-                Conversations per month:<span class="value float-end" id="con-pm">2345</span>
+              <li class="list-group-item bg-blue lh-2 d-flex align-items-center justify-content-between">
+                Conversations per month:<span class="value float-end fs-20 fw-600" id="con-pm">0</span>
               </li>
-              <li class="list-group-item bg-blue lh-2">
-                Potential additional sales:<span class="value float-end" id="addSales">2345</span>
+              <li class="list-group-item bg-blue lh-2 d-flex align-items-center justify-content-between">
+                Potential additional sales:<span class="value float-end fs-20 fw-600" id="addSales">0</span>
               </li>
-              <li class="list-group-item bg-blue lh-2">
-                Potential AOV from SpritleAI sales:<span class="value float-end" id="potAV">2345</span>
+              <li class="list-group-item bg-blue lh-2 d-flex align-items-center justify-content-between">
+                Potential AOV from SpritleAI sales:<span class="value float-end fs-20 fw-600" id="potAV">0</span>
               </li>
-              <li class="list-group-item bg-blue lh-2">
-                Additional unlock sales from SpritleAI:<span class="value float-end " id="addSalesFromSpritle">2345</span>
+              <li class="list-group-item bg-blue lh-2 d-flex align-items-center justify-content-between">
+                Additional unlock sales from SpritleAI:<span class="value float-end fs-20 fw-600 " id="addSalesFromSpritle">0</span>
               </li>
-              <li class="list-group-item bg-blue lh-2">
-                Subscription Cost:<span class="value float-end" id="subsCost">2345</span>
+              <li class="list-group-item bg-blue lh-2 d-flex align-items-center justify-content-between">
+                Subscription Cost:<span class="value float-end fs-20 fw-600" id="subsCost">0</span>
               </li>
             </ul>
             <div class=" d-flex align-items-center justify-content-center">
-            <div class="badge py-2 bg-white w-90 text-left my-3 fs-18 d-none" id="ROI">
-                Monthly ROI : <span id="mon-ROI" class="float-end"></span>
+            <div class="badge py-2 d-flex align-items-center justify-content-evenly bg-white w-90 text-left my-5 fs-20 d-none" id="ROI">
+                Monthly ROI : <span id="mon-ROI" class="float-end txt-green fw-600 fs-30"></span>
               </div>
             </div>
           </div>
@@ -475,7 +483,8 @@
         </div>
       </div>
       <div class="row justify-content-center align-items-center mt-4">
-        <button class="btn bg-blue w-25">Unlock Additional Sales Now</button>
+        <div class="col-lg-4 text-center"><button class="btn bg-blue fs-18  " style="width: 350px;">Unlock Additional Sales Now</button></div>
+        
       </div>
     </div>
     <div class="container ptb-60">
