@@ -1,19 +1,33 @@
-$(".owl-carousel").owlCarousel({
-  animateOut: "fadeOut",
-  margin: 10,
-  dots: false,
-  nav: true,
-  responsive: {
-    0: {
-      items: 1,
-    },
-    600: {
-      items: 1,
-    },
-    1000: {
-      items: 1,
-    },
-  },
+$(document).ready(function () {
+  var owl = $(".owl-carousel");
+  owl.owlCarousel({
+    margin: 10,
+    nav: false,
+    dots: false,
+    speed: 1000,
+    items: 1,
+  });
+  $(".customNextBtn").click(function () {
+    owl.trigger("next.owl.carousel");
+  });
+  $(".customPreviousBtn").click(function () {
+    owl.trigger("prev.owl.carousel");
+  });
+  owl.on("changed.owl.carousel", function (event) {
+    var currentIndex = event.item.index;
+    var totalItems = event.item.count;
+    if (currentIndex === 0) {
+      $(".customPreviousBtn").addClass("disabled");
+    } else {
+      $(".customPreviousBtn").removeClass("disabled");
+    }
+
+    if (currentIndex === totalItems - 1) {
+      $(".customNextBtn").addClass("disabled");
+    } else {
+      $(".customNextBtn").removeClass("disabled");
+    }
+  });
 });
 var swiper = new Swiper("#owl-carousell", {
   freeMode: true,
@@ -57,7 +71,39 @@ var swiper = new Swiper(".digi-logo-slider", {
       slidesPerView: 3,
     },
     991: {
-      slidesPerView: 6,
+      slidesPerView: 5,
+    },
+  },
+});
+var swiper = new Swiper("#testimonial", {
+  slidesPerView: 1,
+  spaceBetween: 24,
+  dots: "true",
+  speed: 1000,
+  autoplay: {
+    delay: 2500,
+  },
+  slidesPerGroup: 1,
+  loop: true,
+  breakpoints: {
+    320: {
+      slidesPerView: 1,
+    },
+    768: {
+      slidesPerView: 1,
+    },
+    991: {
+      slidesPerView: 1,
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true, // Enable clickable pagination bullets
+    },
+
+    // Navigation arrows
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
     },
   },
 });
