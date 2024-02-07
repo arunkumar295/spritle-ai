@@ -1,3 +1,19 @@
+document.addEventListener("DOMContentLoaded", function () {
+  var navLinks = document.querySelectorAll(".nav-link");
+
+  navLinks.forEach(function (navLink) {
+    navLink.addEventListener("click", function (event) {
+      // Remove active class from all nav links
+      navLinks.forEach(function (link) {
+        link.classList.remove("active");
+      });
+
+      // Add active class to the clicked nav link
+      navLink.classList.add("active");
+    });
+  });
+});
+
 $(document).ready(function () {
   var owl = $(".owl-carousel");
   owl.owlCarousel({

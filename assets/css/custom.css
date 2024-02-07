@@ -91,6 +91,9 @@ body {
   line-height: 2.3;
 }
 .bg-contain {
+  background-size: 100% 100% !important;
+}
+.bg-cover {
   background-size: cover !important;
 }
 .h-390 {
@@ -135,6 +138,9 @@ body {
 }
 .gradient-card {
   background: linear-gradient(45deg, #efeeff, white 34%, #e4efef 100%);
+}
+.gradient-card2 {
+  background: linear-gradient(45deg, #e4efef, white 34%, #efeeff 100%);
 }
 .input {
   border-radius: 8px;
@@ -192,6 +198,12 @@ body {
   .ptb-60 {
     padding-top: 30px;
     padding-bottom: 30px;
+  }
+  .pt-60 {
+    padding-top: 60px;
+  }
+  .pb-60 {
+    padding-bottom: 60px;
   }
   .float-img {
     width: 55px;
