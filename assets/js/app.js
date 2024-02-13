@@ -169,3 +169,12 @@ function btnClick(e) {
   }
 }
 document.getElementById("myButton").addEventListener("click", btnClick);
+var phone = document.getElementsByClassName("input");
+if (phone) {
+  for (var i = 0; i < phone.length; i++) {
+    phone[i].addEventListener("input", function () {
+      // Remove any non-numeric characters and specified symbols
+      this.value = this.value.replace(/[^0-9+()\-]/g, "");
+    });
+  }
+}
