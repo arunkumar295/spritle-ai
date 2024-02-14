@@ -90,6 +90,9 @@ body {
 .lh-2 {
   line-height: 2.3;
 }
+.lh-22 {
+  line-height: 2;
+}
 .bg-contain {
   background-size: 100% 100% !important;
 }

@@ -11,7 +11,7 @@
     <meta name="twitter:card" content="summary_large_image" />
     <meta
       name="twitter:title"
-      content="Airport Management System | Airport Management Ticketing Software"
+      content="Convert Conversations into Sales with SpritleAI"
     />
     <link
     href="https://assets.calendly.com/assets/external/widget.css"
@@ -24,23 +24,23 @@
   ></script>
     <meta
       name="twitter:description"
-      content="Digitize your airport fault and incident management and empower your internal teams to leverage real-time data with our comprehensive solution today!"
+      content="Unlock SpritleAI's power to effortlessly convert chats into sales. Track ROI, choose your plan, and watch sales soar starting at $49/month!"
     />
     <meta
       name="twitter:image"
-      content="https://www.spritle.com/images/AI_ML_Page/Gene-Analysis-Dashboard.png.pagespeed.ce.n1n8Y7RGdR.png"
+      content=""
     />
 
-    <link rel="canonical" href="https://www.spritle.com/aviation/" />
+    <link rel="canonical" href="" />
     <!--facebook og-->
-    <meta property="og:url" content="https://www.spritle.com/aviation/" />
+    <meta property="og:url" content="" />
     <meta
       name="og:title"
-      content="Airport Management System | Airport Management Ticketing Software"
+      content="Convert Conversations into Sales with SpritleAI"
     />
     <meta
       property="og:description"
-      content="Digitize your airport fault and incident management and empower your internal teams to leverage real-time data with our comprehensive solution today!"
+      content="Unlock SpritleAI's power to effortlessly convert chats into sales. Track ROI, choose your plan, and watch sales soar starting at $49/month!"
     />
     <meta
       property="og:image"
@@ -65,7 +65,7 @@
     <!--meta-->
     <meta
       name="description"
-      content=" Digitize your airport fault and incident management and empower your internal teams to leverage real-time data with our comprehensive solution today!"
+      content=" Unlock SpritleAI's power to effortlessly convert chats into sales. Track ROI, choose your plan, and watch sales soar starting at $49/month!"
     />
     <meta name="author" content="ThemeTags" />
 
@@ -479,22 +479,22 @@
                 <label class="mb-3"
                   >Enter the number of store visitors per month:</label
                 >
-                <input type="number" class="w-100 input ps-3" oninput="change(visitors-pm)" required id="visitors-pm" />
+                <input type="number" class="w-100 input ps-3 lh-22" oninput="change(visitors-pm)" required id="visitors-pm" />
               </div>
               <div class="mb-4">
                 <label class="mb-3"
                   >Enter the number of orders you generate per month:</label
                 >
-                <input type="number" class="w-100 input ps-3" oninput="change(order-pm)" required id="order-pm" />
+                <input type="number" class="w-100 input ps-3 lh-22" oninput="change(order-pm)" required id="order-pm" />
               </div>
               <div class="mb-4">
                 <label class="mb-3 "
                   >What is your store's Average Order Value (AOV)?</label
                 >
-                <input type="number" oninput="change(aov)" class="w-100 input ps-3" required id="aov" />
+                <input type="number" oninput="change(aov)" class="w-100 lh-22 input ps-3" required id="aov" />
               </div>
               <div class="mt-5">
-                <button class="btn bg-blue w-100 fs-18 fw-600 h-48  mt-10" id="myButton">calculate</button>
+                <button class="btn bg-blue w-100 h-48 fs-18 fw-600  mt-10" id="myButton">Calculate</button>
               </div>
             </form>
           </div>
@@ -534,7 +534,7 @@
         </div>
       </div>
       <div class="row justify-content-center align-items-center mt-5">
-        <div class="col-lg-4 text-center"><button class="btn bg-blue fs-18 h-48  " style="width: 350px;">Unlock Additional Sales Now</button></div>
+        <div class="col-lg-4 text-center"><button class="btn bg-blue fs-18 h-48 " style="width: 350px;">Unlock Additional Sales Now</button></div>
         
       </div>
     </div>
@@ -553,6 +553,47 @@
     <script src="assets/js/bootstrap.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-    <script src="assets/js/app.js"></script>
+    
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+  // Your JavaScript code here
+  function btnClick(e) {
+    e.preventDefault();
+    const visitPM = document.getElementById("visitors-pm").value;
+    const orderPM = document.getElementById("order-pm").value;
+    const aOV = document.getElementById("aov").value;
+    console.log(visitPM, orderPM, aOV);
+    console.log("arun");
+
+    if (!visitPM || !orderPM || !aOV) {
+      console.log("error");
+    } else {
+      var conversationsPerMonth = parseFloat(
+        ((visitPM / 3333.33) * 100).toFixed(0)
+      );
+      var potentialAdditionalSales = parseFloat(
+        ((orderPM / 769.23) * 100).toFixed(0)
+      );
+      var potentialAOV = parseFloat(((aOV / 90.9) * 100).toFixed(0));
+      var addUnlockSales = parseFloat(
+        ((potentialAOV / 76.92) * 100).toFixed(0)
+      );
+      var monthlyROI = parseFloat(
+        (((addUnlockSales - 15) / 15) * 100).toFixed(0)
+      );
+      document.getElementById("con-pm").textContent = conversationsPerMonth;
+      document.getElementById("addSales").textContent =
+        potentialAdditionalSales;
+      document.getElementById("potAV").textContent = "$ " + potentialAOV;
+      document.getElementById("addSalesFromSpritle").textContent =
+        "$ " + addUnlockSales;
+      document.getElementById("subsCost").textContent = "$ 15";
+      document.getElementById("mon-ROI").textContent = monthlyROI + " %";
+      document.getElementById("ROI").classList.remove("d-none");
+    }
+  }
+  document.getElementById("myButton").addEventListener("click", btnClick);
+});
+    </script><script src="assets/js/app.js"></script>
   </body>
 </html>
